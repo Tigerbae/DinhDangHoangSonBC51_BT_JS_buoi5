@@ -1,67 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>DinhDangHoangSonBC51</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="card"style="width: 18rem;">
+    <div class="row">
+      <div class="card col-sm" style="width: 18rem">
         <div class="card-header bg-success text-white">Quan Ly Tuyen Sinh</div>
         <div class="card-body">
-            <label>Diem Chuan Cua Hoi Dong:</label>
-            <input id="diemChuan" type="text" placeholder="1,2,3,4,...10">
-            <label>Diem 3 Mon Thi:</label>
-            <input id="diemMon1" type="text" placeholder="1,2,3,4,...10">
-            <input id="diemMon2" type="text" placeholder="1,2,3,4,...10">
-            <input id="diemMon3" type="text" placeholder="1,2,3,4,...10">      
-            <div class="form-group">
-                <label>Khu Vuc:</label>
-                <select id="khuVuc" class="form-control" id="chonKhuVuc">
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>X</option>
-                  </select>
-            </div>
-            <div class="form-group">
-                <label>Doi Tuong:</label>
-                <select id="doiTuong" class="form-control" id="chonDoiTuong">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>0</option>
-                  </select>
-            </div>
-            <button id="btnTinhDiem" class="btn btn-success">Nhap</button>
-            <br>
-            <label>Diem Tong Ket la:</label>
-            <p id="pResultD"></p>
+          <label>Diem Chuan Cua Hoi Dong:</label>
+          <input id="diemChuan" type="text" placeholder="1,2,3,4,...10" />
+          <label style="display: block;">Diem 3 Mon Thi:</label>
+          <input id="diemMon1" type="text" placeholder="1,2,3,4,...10" />
+          <input id="diemMon2" type="text" placeholder="1,2,3,4,...10" />
+          <input id="diemMon3" type="text" placeholder="1,2,3,4,...10" />
+          <div class="form-group">
+            <label>Khu Vuc:</label>
+            <select id="khuVuc" class="form-control">
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>X</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Doi Tuong:</label>
+            <select id="doiTuong" class="form-control" id="chonDoiTuong">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>0</option>
+            </select>
+          </div>
+          <button id="btnTinhDiem" class="btn btn-success">Nhap</button>
+          <br />
+          <label>Diem Tong Ket la:</label>
+          <p id="pResultD"></p>
         </div>
-    </div>
-    <div class="card"style="width: 18rem;">
+      </div>
+      <div class="card col-sm" style="width: 18rem">
         <div class="card-header bg-danger text-white">Tinh Tien Dien</div>
         <div class="card-body">
-            <label>Dien (Kw)</label>
-            <input id="soKw" type="text" placeholder="50,150,200">
-            <button id="btnTienDien" class="btn btn-danger">Tinh Tien Dien</button>
-            <br>
-            <label>Tien Dien la:</label>
-            <p id="pResultTD"></p>
+          <label>Dien (Kw)</label>
+          <input id="soKw" type="text" placeholder="50,150,200" />
+          <button id="btnTienDien" class="btn btn-danger">
+            Tinh Tien Dien
+          </button>
+          <br />
+          <label>Tien Dien la:</label>
+          <p id="pResultTD"></p>
         </div>
-        
+      </div>
+      <div class="card col-sm" style="width: 18rem">
+        <div class="card-header bg-primary text-white">
+          Tinh Thue Thu Nhap Ca Nhan
+        </div>
+        <div class="card-body">
+          <label style="display: block;">Ho & Ten:</label>
+          <input id="hoTen" type="text" placeholder="Nguyen Van A,..." />
+          <label
+            >Tong Thu Nhap Nam <br />
+            <i>(Don Vi: Trieu Dong)</i>:</label
+          >
+          <input
+            id="tongTTN"
+            type="text"
+            placeholder="100, 200.6, 300.5, ..,10"
+          />
+          <label>So Nguoi Phu Thuoc:</label>
+          <input id="soNPT" type="text" placeholder="1,2,3,4,...10" />
+          <button style="display: block;" id="btnTinhThue" class="btn btn-primary">Tinh Thue</button>
+          <br />
+          <label
+            >Thue Thu Nhap Ca Nhan Cua A/C
+            <p id="pHoTen" style="font-weight: bold"></p>
+            la:</label
+          >
+          <p id="pResultT"></p>
+        </div>
+      </div>
+      <div class="card col-sm" style="width: 18rem">
+        <div class="card-header bg-warning text-white">Tinh Tien Cap</div>
+        <div class="card-body">
+          <div class="form-group">
+            <label >Loai Khach Hang:</label>
+            <select
+              id="loaiKhachHang"
+              onchange="chonLoaiKhachHang()"
+              class="form-control"
+            >
+              <option>Chon Loai Khach Hang</option>
+              <option>Doanh Nghiep</option>
+              <option>Nha Dan</option>
+            </select>
+          </div>
+          <label style="display: block;">Ma Khach Hang:</label>
+          <input style="display: block;" id="maKhachHang" type="text" placeholder="ABC123456678,..." />
+          <label id="soKetNoiLabel" style="display: none;">So Ket Noi:</label>
+          <input
+            id="soKetNoi"
+            style="display: none"
+            type="text"
+            placeholder="1,2,3,4,...10"
+          />
+          <label style="display: block;">So Kenh Cao Cap:</label>
+          <input id="soKenhCC" type="text" placeholder="1,2,3,4,...10" />
+          <button style="display: block;" id="btnTinhPhi" class="btn btn-warning">Tinh Phi Cap</button>
+          <br />
+          <label
+            >Phi Cap Cua Ma khach Hang:
+            <p id="pMKH" style="font-weight: bold"></p>
+            la:</label
+          >
+          <p id="pResultPC"></p>
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <!-- main  -->
     <script src="./main.js"></script>
-    
   </body>
 </html>
